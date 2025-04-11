@@ -1,253 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bharath & Rishita's Wedding</title>
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #f9f7f4;
-      color: #333;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .header {
-      margin-bottom: 30px;
-    }
-    .names {
-      font-size: 48px;
-      font-weight: normal;
-      color: #9c7c38;
-      margin: 20px 0;
-      font-family: 'Playfair Display', serif;
-    }
-    .ampersand {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 52px;
-      color: #ba9b65;
-      margin: 0 10px;
-    }
-    .invite-text {
-      font-size: 18px;
-      margin: 30px 0;
-      line-height: 1.8;
-    }
-    .details {
-      background-color: #fff;
-      border: 1px solid #e2d9c2;
-      border-radius: 8px;
-      padding: 30px;
-      margin: 30px 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    .detail-item {
-      margin: 15px 0;
-      font-size: 18px;
-    }
-    .detail-label {
-      font-weight: bold;
-      color: #9c7c38;
-      display: block;
-      margin-bottom: 5px;
-    }
-    .divider {
-      height: 2px;
-      background: linear-gradient(to right, transparent, #e2d9c2, transparent);
-      margin: 30px 0;
-    }
-    .rsvp-section {
-      margin-top: 40px;
-    }
-    .rsvp-form {
-      background-color: #fff;
-      border: 1px solid #e2d9c2;
-      border-radius: 8px;
-      padding: 30px;
-      text-align: left;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-      color: #666;
-    }
-    input[type="text"],
-    input[type="email"],
-    select {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 16px;
-      font-family: inherit;
-    }
-    .btn {
-      background-color: #9c7c38;
-      color: white;
-      border: none;
-      padding: 14px 28px;
-      font-size: 18px;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-      margin-top: 20px;
-    }
-    .btn:hover {
-      background-color: #ba9b65;
-    }
-    .footer {
-      margin-top: 60px;
-      font-style: italic;
-      color: #888;
-    }
-    .header-img {
-      width: 100%;
-      height: 150px;
-      background: linear-gradient(to right, #f9f7f4, #e2d9c2, #f9f7f4);
-      border-radius: 8px 8px 0 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .header-img::before {
-      content: "♥";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 72px;
-      color: rgba(255, 255, 255, 0.8);
-    }
-    .thank-you {
-      display: none;
-      padding: 30px;
-      background-color: #f0f8e5;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-    @media (max-width: 600px) {
-      .names {
-        font-size: 36px;
-      }
-      .ampersand {
-        font-size: 40px;
-      }
-      .invite-text {
-        font-size: 16px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharath & Rishita's Wedding</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f9f7f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header {
+            margin-bottom: 30px;
+        }
+        .names {
+            font-size: 48px;
+            font-weight: normal;
+            color: #9c7c38;
+            margin: 20px 0;
+            font-family: 'Playfair Display', serif;
+        }
+        .ampersand {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 52px;
+            color: #ba9b65;
+            margin: 0 10px;
+        }
+        .invite-text {
+            font-size: 18px;
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+        .details {
+            background-color: #fff;
+            border: 1px solid #e2d9c2;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .detail-item {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+        .detail-label {
+            font-weight: bold;
+            color: #9c7c38;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #e2d9c2, transparent);
+            margin: 30px 0;
+        }
+        .rsvp-section {
+            margin-top: 40px;
+        }
+        .rsvp-form {
+            background-color: #fff;
+            border: 1px solid #e2d9c2;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #666;
+        }
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        .btn {
+            background-color: #9c7c38;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #ba9b65;
+        }
+        .footer {
+            margin-top: 60px;
+            font-style: italic;
+            color: #888;
+        }
+        .header-img {
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(to right, #f9f7f4, #e2d9c2, #f9f7f4);
+            border-radius: 8px 8px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .header-img::before {
+            content: "♥";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 72px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .thank-you {
+            display: none;
+            padding: 30px;
+            background-color: #f0f8e5;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .names {
+                font-size: 36px;
+            }
+            .ampersand {
+                font-size: 40px;
+            }
+            .invite-text {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="header-img"></div>
-      <h1 class="names">Bharath <span class="ampersand">&</span> Rishita</h1>
-      <p class="invite-text">
-        With joy in our hearts, we invite you to celebrate<br>
-        as we unite our lives in marriage
-      </p>
+    <div class="container">
+        <div class="header">
+            <div class="header-img"></div>
+            <h1 class="names">Bharath <span class="ampersand">&</span> Rishita</h1>
+            <p class="invite-text">
+                With joy in our hearts, we invite you to celebrate<br>
+                as we unite our lives in marriage
+            </p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="details">
+            <div class="detail-item">
+                <span class="detail-label">Date</span>
+                Saturday, May 10th, 2025
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Time</span>
+                6:00 PM onwards
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Venue</span>
+                CPR Kalyana Mandapam<br>
+                Nellore
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="rsvp-section">
+            <h2 style="color: #9c7c38;">RSVP</h2>
+            <p>We would be delighted to have you join us on our special day.<br>
+            Please let us know if you can attend by April 25th, 2025.</p>
+            
+            <div class="rsvp-form" id="rsvp-form">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="attendance">Will you be attending?</label>
+                    <select id="attendance" name="attendance" required>
+                        <option value="">Please select</option>
+                        <option value="yes">Happily Accept</option>
+                        <option value="no">Regretfully Decline</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests (including yourself)</label>
+                    <select id="guests" name="guests" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message for the Couple (Optional)</label>
+                    <input type="text" id="message" name="message">
+                </div>
+                <button class="btn" onclick="submitRSVP()">Submit RSVP</button>
+            </div>
+            
+            <div class="thank-you" id="thank-you">
+                <h3>Thank you for your response!</h3>
+                <p>We've received your RSVP and look forward to celebrating with you.</p>
+                <p>If you need to make any changes, please contact us directly.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>With love and gratitude,<br>Bharath & Rishita</p>
+        </div>
     </div>
 
-    <div class="divider"></div>
+    <script>
+    function submitRSVP() {
+        const data = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            attendance: document.getElementById('attendance').value,
+            guests: document.getElementById('guests').value,
+            message: document.getElementById('message').value
+        };
 
-    <div class="details">
-      <div class="detail-item">
-        <span class="detail-label">Date</span>
-        Saturday, May 10th, 2025
-      </div>
-      <div class="detail-item">
-        <span class="detail-label">Time</span>
-        6:00 PM onwards
-      </div>
-      <div class="detail-item">
-        <span class="detail-label">Venue</span>
-        CPR Kalyana Mandapam<br>
-        Nellore
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="rsvp-section">
-      <h2 style="color: #9c7c38;">RSVP</h2>
-      <p>We would be delighted to have you join us on our special day.<br>
-      Please let us know if you can attend by April 25th, 2025.</p>
-
-      <form class="rsvp-form" id="rsvp-form" method="POST"
-        action="https://script.google.com/macros/s/AKfycbw9UxaZFUz0PAFBoZ8GFgn-abK9Q_JfqYIwkzFm6KKFScjAXAEpVdjgtWPGcjUlUVT9vA/exec"
-        target="hidden_iframe"
-        onsubmit="return handleSubmit();">
-        <div class="form-group">
-          <label for="firstName">First Name</label>
-          <input type="text" id="firstName" name="firstName" required>
-        </div>
-        <div class="form-group">
-          <label for="lastName">Last Name</label>
-          <input type="text" id="lastName" name="lastName" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="attendance">Will you be attending?</label>
-          <select id="attendance" name="attendance" required>
-            <option value="">Please select</option>
-            <option value="yes">Happily Accept</option>
-            <option value="no">Regretfully Decline</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="guests">Number of Guests (including yourself)</label>
-          <select id="guests" name="guests" required>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Message for the Couple (Optional)</label>
-          <input type="text" id="message" name="message">
-        </div>
-        <input type="submit" class="btn" value="Submit RSVP">
-      </form>
-
-      <iframe name="hidden_iframe" style="display:none;"></iframe>
-
-      <div class="thank-you" id="thank-you">
-        <h3>Thank you for your response!</h3>
-        <p>We've received your RSVP and look forward to celebrating with you.</p>
-        <p>If you need to make any changes, please contact us directly.</p>
-      </div>
-    </div>
-
-    <div class="footer">
-      <p>With love and gratitude,<br>Bharath & Rishita</p>
-    </div>
-  </div>
-
-  <script>
-    function handleSubmit() {
-      setTimeout(() => {
-        document.getElementById('rsvp-form').style.display = 'none';
-        document.getElementById('thank-you').style.display = 'block';
-      }, 500);
-      return true; // continue with form submission
+        fetch("https://script.google.com/macros/s/AKfycbw9UxaZFUz0PAFBoZ8GFgn-abK9Q_JfqYIwkzFm6KKFScjAXAEpVdjgtWPGcjUlUVT9vA/exec", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: { "Content-Type": "application/json" }
+        })
+        .then(res => res.json())
+        .then(() => {
+            document.getElementById('rsvp-form').style.display = 'none';
+            document.getElementById('thank-you').style.display = 'block';
+        })
+        .catch(err => {
+            alert("Error submitting RSVP. Please try again.");
+            console.error(err);
+        });
     }
-  </script>
+</script>
+
 </body>
 </html>
