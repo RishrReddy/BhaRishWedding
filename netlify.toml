@@ -1,0 +1,6 @@
+[build]
+  publish = "/opt/build/repo"
+  functions = "netlify/functions"  # Points to the functions directory
+
+[context.production.environment]
+  GOOGLE_SHEET_ID = "1kdSBm_DoXE2n-FjtuzIoB7DAbqxrlJ8QdkO7bHNNwK8"  # Replace with your spreadsheet ID
