@@ -42,7 +42,7 @@ exports.handler = async function(event, context) {
         const sheets = google.sheets({ version: 'v4', auth });
         const spreadsheetId = '1kdSBm_DoXE2n-FjtuzIoB7DAbqxrlJ8QdkO7bHNNwK8'; // The ID of your Google Sheet
 
-        const range = 'RSVPs!A2:G2';  // Change this to match your sheet's range
+        const range = 'RSVPs!A2:G';  // Change this to match your sheet's range
         const valueInputOption = 'RAW';
         const resource = {
             values: [[
@@ -55,13 +55,14 @@ exports.handler = async function(event, context) {
                 data.message
             ]],
         };
-
-        await sheets.spreadsheets.values.append({
+        console.log("Formatted row values:", resource);
+        const response = await sheets.spreadsheets.values.append({
             spreadsheetId,
             range,
             valueInputOption,
             resource,
         });
+        console.log("Sheets API response:", response.data); // 👈 Log API response
 
         return {
             statusCode: 200,
