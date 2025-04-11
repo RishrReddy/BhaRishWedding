@@ -1,8 +1,7 @@
 const { google } = require('googleapis');
-const fs = require('fs');
-const path = require('path');
 
 exports.handler = async function(event, context) {
+  // CORS handling (allow POST requests)
   if (event.httpMethod === "OPTIONS") {
     return {
       statusCode: 200,
@@ -16,8 +15,8 @@ exports.handler = async function(event, context) {
 
   if (event.httpMethod === "POST") {
     try {
-      // Read the service account credentials (this file should be placed in the 'config' folder)
-      const credentials = JSON.parse(fs.readFileSync(path.join(__dirname, '../../config/your-service-account-file.json')));
+      // Get the service account credentials from the environment variable
+      const credentials = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
 
       const auth = new google.auth.GoogleAuth({
         credentials,
@@ -25,12 +24,12 @@ exports.handler = async function(event, context) {
       });
 
       const sheets = google.sheets({ version: 'v4', auth });
-      const data = JSON.parse(event.body);  // Assuming the form data is passed as JSON in the request body
+      const data = JSON.parse(event.body);  // The RSVP data from the form
 
-      const spreadsheetId = '1kdSBm_DoXE2n-FjtuzIoB7DAbqxrlJ8QdkO7bHNNwK8';  // Replace with your Google Sheet ID
-      const range = 'Sheet1!A1';  // Adjust the range as needed
+      const spreadsheetId = 'your-google-sheet-id';  // Replace with your Google Sheets ID
+      const range = 'RSVPs!A1';  // Adjust the range according to your sheet
 
-      // Append the data to the Google Sheet
+      // Append data to the Google Sheets document
       await sheets.spreadsheets.values.append({
         spreadsheetId,
         range,
