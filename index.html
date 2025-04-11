@@ -246,7 +246,7 @@
             message: document.getElementById('message').value
         };
 
-        fetch("https://script.google.com/macros/s/AKfycbxjgsIUbws6_uYid37E-lfHAdkq-svgXWKUhdlNf7DFUj8gFjuo97amOQ2evpVR6M7SVg/exec", {
+        fetch("/.netlify/functions/submitRSVP", {
             method: "POST",
             body: JSON.stringify(data),
             headers: { "Content-Type": "application/json" }
