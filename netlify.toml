@@ -1,6 +1,4 @@
 [build]
-  publish = "/opt/build/repo"
-  functions = "netlify/functions"  # Points to the functions directory
+  publish = "."               # This tells Netlify to deploy from root folder
+  functions = "netlify/functions"  # Location of Netlify functions
 
-[context.production.environment]
-  GOOGLE_SHEET_ID = "1kdSBm_DoXE2n-FjtuzIoB7DAbqxrlJ8QdkO7bHNNwK8"  # Replace with your spreadsheet ID
