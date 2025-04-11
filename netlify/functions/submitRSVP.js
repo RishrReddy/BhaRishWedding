@@ -1,6 +1,7 @@
 const { google } = require('googleapis');
 console.log('Google Credentials:', process.env.GOOGLE_CREDENTIALS); 
 const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS); // Service account credentials
+credentials.private_key = credentials.private_key.replace(/\\n/g, '\n'); 
 
 exports.handler = async function(event, context) {
     // CORS headers for preflight (OPTIONS request) and normal request
