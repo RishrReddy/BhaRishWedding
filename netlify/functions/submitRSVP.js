@@ -1,4 +1,5 @@
 const { google } = require('googleapis');
+console.log('Google Credentials:', process.env.GOOGLE_CREDENTIALS); 
 const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS); // Service account credentials
 
 exports.handler = async function(event, context) {
