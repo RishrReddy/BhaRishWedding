@@ -41,13 +41,19 @@
             margin: 30px 0;
             line-height: 1.8;
         }
+        .events-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            gap: 20px;
+        }
         .details {
             background-color: #fff;
             border: 1px solid #e2d9c2;
             border-radius: 8px;
             padding: 30px;
-            margin: 30px 0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            flex: 1;
         }
         .detail-item {
             margin: 15px 0;
@@ -58,6 +64,35 @@
             color: #9c7c38;
             display: block;
             margin-bottom: 5px;
+        }
+        .live-link {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f9f4e8;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .live-link a {
+            color: #9c7c38;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .live-link a:hover {
+            text-decoration: underline;
+        }
+        .qr-code {
+            margin: 20px auto 0;
+            width: 120px;
+            height: 120px;
+            background-color: #fff;
+            padding: 8px;
+            border: 1px solid #e2d9c2;
+            border-radius: 4px;
+        }
+        .qr-label {
+            font-size: 14px;
+            color: #888;
+            margin-top: 5px;
         }
         .divider {
             height: 2px;
@@ -137,7 +172,10 @@
             border-radius: 8px;
             margin-top: 20px;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .events-container {
+                flex-direction: column;
+            }
             .names {
                 font-size: 36px;
             }
@@ -163,19 +201,58 @@
         
         <div class="divider"></div>
         
-        <div class="details">
-            <div class="detail-item">
-                <span class="detail-label">Date</span>
-                Saturday, May 10th, 2025
+        <!-- Parallel display of wedding and reception -->
+        <div class="events-container">
+            <div class="details">
+                <h3 style="color: #9c7c38; margin-top: 0;">Wedding Ceremony</h3>
+                <div class="detail-item">
+                    <span class="detail-label">Date</span>
+                    Saturday, May 10th, 2025
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Time</span>
+                    6:00 PM onwards
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Venue</span>
+                    CPR Kalyana Mandapam<br>
+                    Nellore
+                </div>
+                <!-- QR Code for the wedding venue -->
+                <div class="qr-code">
+                    <img src="/CPR venue.png"" alt="Wedding Venue QR Code" width="120" height="120">
+                </div>
+                <div class="qr-label">Scan for venue location</div>
+		<!-- Live streaming link -->
+                <div class="live-link">
+                    <span class="detail-label">
+                    <a href="https://vlivestreaming.com/25/04/bharathwithrishita" target="_blank">
+                        Watch Online</span>
+                    </a>
+                </div>
             </div>
-            <div class="detail-item">
-                <span class="detail-label">Time</span>
-                6:00 PM onwards
-            </div>
-            <div class="detail-item">
-                <span class="detail-label">Venue</span>
-                CPR Kalyana Mandapam<br>
-                Nellore
+		
+
+            <div class="details">
+                <h3 style="color: #9c7c38; margin-top: 0;">Reception</h3>
+                <div class="detail-item">
+                    <span class="detail-label">Date</span>
+                    Wednesday, May 14th, 2025
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Time</span>
+                    7:00 PM onwards
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Venue</span>
+                    Chenna's Convention<br>
+                    Vizag
+                </div>
+                <!-- QR Code for the reception venue -->
+                <div class="qr-code">
+                    <img src="/Chenna's venue.png" alt="Reception Venue QR Code" width="120" height="120">
+                </div>
+                <div class="qr-label">Scan for venue location</div>
             </div>
         </div>
         
@@ -203,7 +280,9 @@
                     <label for="attendance">Will you be attending?</label>
                     <select id="attendance" name="attendance" required>
                         <option value="">Please select</option>
-                        <option value="yes">Happily Accept</option>
+                        <option value="yes">Happily Accept for All Events</option>
+			<option value="yes">Happily Accept for Wedding</option>
+			<option value="yes">Happily Accept for Reception</option>
                         <option value="no">Regretfully Decline</option>
                     </select>
                 </div>
@@ -261,7 +340,6 @@
             console.error(err);
         });
     }
-</script>
-
+    </script>
 </body>
 </html>
